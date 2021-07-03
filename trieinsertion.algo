@@ -1,0 +1,19 @@
+
+
+
+PROCEDURE trie_insertion(var t : ARRAY_OF INTEGER[n],n:INTEGER)
+VAR
+    aux,p,i:INTEGER
+BEGIN
+    aux:=t[i];/*aux est la valeur à insérer dans l'endroit approprié du Tableau. 
+               On décale toutes les valeurs du Tableau < aux à droite pour vider*/
+    p:=i-1;
+  WHILE (p>0 and t[p]>aux) DO
+      
+      t[p+1]:=t[p];
+      p:=p-1;
+  END_WHILE
+  t[p+1]:=aux;//Finalement la valeur aux est insérée à son emplacement adéquat.
+
+
+END
